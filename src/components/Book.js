@@ -1,10 +1,13 @@
 import React from 'react';
+import _ from 'lodash';
+import Book from './Book';
 
-const BooksList = ({books, setBooks}) => {
-  
-  const handleRemoveBook =(id) =>{
-    setBooks(books.filter((book) => book.id !==id));
-  } 
+const BooksList = ({ books, setBooks }) => {
+
+  const handleRemoveBook = (id) => {
+    setBooks(books.filter((book) => book.id !== id));
+  };
+
   return (
     <React.Fragment>
       <div className="book-list">
