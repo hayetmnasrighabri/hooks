@@ -1,4 +1,5 @@
 import React from 'react';
+import Book from './Book';
 
 const BooksList = ({books, setBooks}) => {
   
@@ -8,7 +9,7 @@ const BooksList = ({books, setBooks}) => {
   return (
     <React.Fragment>
       <div className="book-list">
-        {!_.isEmpty(books) ? (
+        {!_isEmpty(books) ? (
           books.map((book) => (
             <Book key={book.id} {...book} handleRemoveBook={handleRemoveBook} />
           ))
